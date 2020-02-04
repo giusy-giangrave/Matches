@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      ⚽️
+    </ion-title>
+  </ion-toolbar>
+
+
+<ion-segment (ionChange) ="segmentChanged()" [(ngModel)] = "segment" color ="secondary">
+  <ion-segment-button value ="0">
+    <ion-icon name ="football">
+    </ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value ="1">
+      <ion-icon name ="grid">
+      </ion-icon>
+    </ion-segment-button>
+</ion-segment>
+</ion-header>
+<ion-content>
+    <ion-slides [options]="sliderOptions" #slides (ionSlideDidChange)="slideChanged()" >
+        <ion-slide>
+          <app-matches></app-matches>
+        </ion-slide>
+        <ion-slide>
+          <app-groupresult></app-groupresult>
+        </ion-slide>
+      </ion-slides>
+ 
+  
+
